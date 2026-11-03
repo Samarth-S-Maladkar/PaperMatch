@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  db:
+    image: ankane/pgvector:v0.5.1
+    container_name: papermatch-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: papermatch
+      POSTGRES_PASSWORD: papermatch_dev_password
+      POSTGRES_DB: papermatch
+    ports:
+      - "5432:5432"
+    volumes:
+      - papermatch_pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U papermatch -d papermatch"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  embedding-service:
+    build: ./embedding-service
+    container_name: papermatch-embeddings
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_NAME: sentence-transformers/all-MiniLM-L6-v2
+
+volumes:
+  papermatch_pgdata:
