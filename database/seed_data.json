@@ -1,0 +1,887 @@
+{
+  "categories": [
+    [
+      "Artificial Intelligence",
+      "General AI systems, reasoning, and planning research."
+    ],
+    [
+      "Machine Learning",
+      "Statistical learning algorithms and theory."
+    ],
+    [
+      "Deep Learning",
+      "Neural network architectures and training methods."
+    ],
+    [
+      "Computer Vision",
+      "Image and video understanding systems."
+    ],
+    [
+      "Natural Language Processing",
+      "Text understanding, generation, and language models."
+    ],
+    [
+      "Cybersecurity",
+      "Security, privacy, and adversarial robustness."
+    ],
+    [
+      "Database Systems",
+      "Data storage, indexing, and query processing."
+    ],
+    [
+      "Distributed Systems",
+      "Scalable, fault-tolerant distributed computing."
+    ],
+    [
+      "Cloud Computing",
+      "Cloud infrastructure, orchestration, and services."
+    ],
+    [
+      "Data Science",
+      "Applied data analysis, mining, and visualization."
+    ]
+  ],
+  "authors": [
+    [
+      "Aisha Rahman",
+      "University of Toronto"
+    ],
+    [
+      "Daniel Kowalski",
+      "ETH Zurich"
+    ],
+    [
+      "Priya Natarajan",
+      "IIT Bombay"
+    ],
+    [
+      "Wei Chen",
+      "Tsinghua University"
+    ],
+    [
+      "Sofia Moreno",
+      "Universidad Politecnica de Madrid"
+    ],
+    [
+      "James O'Connor",
+      "Trinity College Dublin"
+    ],
+    [
+      "Yuki Tanaka",
+      "University of Tokyo"
+    ],
+    [
+      "Fatima Zahra",
+      "KAUST"
+    ],
+    [
+      "Lucas Silva",
+      "Universidade de Sao Paulo"
+    ],
+    [
+      "Elena Petrova",
+      "Moscow Institute of Physics and Technology"
+    ],
+    [
+      "Michael Osei",
+      "University of Cape Town"
+    ],
+    [
+      "Hannah Schmidt",
+      "TU Munich"
+    ],
+    [
+      "Ravi Verma",
+      "IISc Bangalore"
+    ],
+    [
+      "Chloe Martin",
+      "Sorbonne University"
+    ],
+    [
+      "Noah Bergstrom",
+      "KTH Royal Institute of Technology"
+    ],
+    [
+      "Grace Kim",
+      "KAIST"
+    ],
+    [
+      "Omar Haddad",
+      "American University of Beirut"
+    ],
+    [
+      "Isabella Rossi",
+      "Politecnico di Milano"
+    ],
+    [
+      "Ethan Walker",
+      "University of British Columbia"
+    ],
+    [
+      "Meera Pillai",
+      "IIT Madras"
+    ]
+  ],
+  "papers": [
+    {
+      "id": 1,
+      "title": "Hierarchical Planning for Long-Horizon Autonomous Agents",
+      "abstract": "We study decision-making agents that must complete tasks spanning thousands of primitive actions. We propose a hierarchical planner that decomposes goals into reusable sub-policies learned via offline demonstrations, and show that it reduces planning time by an order of magnitude on household-robotics and logistics benchmarks compared to flat search-based planners.",
+      "year": 2023,
+      "venue": "ICML",
+      "doi": "10.5555/pm2001.101",
+      "url": "https://papermatch.example.org/papers/1",
+      "category_id": 1
+    },
+    {
+      "id": 2,
+      "title": "A Framework for Explainable Multi-Agent Coordination",
+      "abstract": "Multi-agent systems increasingly coordinate in high-stakes settings such as traffic control and supply chains. We introduce a coordination framework that produces natural-language justifications for each agent's action alongside a formal audit trail, and evaluate it on simulated fleet-management scenarios where explanation quality is judged by human raters.",
+      "year": 2019,
+      "venue": "ACL",
+      "doi": "10.5555/pm2002.102",
+      "url": "https://papermatch.example.org/papers/2",
+      "category_id": 1
+    },
+    {
+      "id": 3,
+      "title": "Sample-Efficient Meta-Learning via Task Embedding Reuse",
+      "abstract": "Few-shot learning methods often require large meta-training sets to generalize. We propose a task-embedding cache that reuses gradient information across structurally similar tasks, cutting meta-training sample requirements roughly in half on standard few-shot classification and regression benchmarks while matching baseline accuracy.",
+      "year": 2022,
+      "venue": "IEEE S&P",
+      "doi": "10.5555/pm2003.103",
+      "url": "https://papermatch.example.org/papers/3",
+      "category_id": 2
+    },
+    {
+      "id": 4,
+      "title": "Robust Gradient Boosting Under Label Noise",
+      "abstract": "Gradient boosted trees are widely used on tabular data but degrade sharply when training labels are noisy. We propose a reweighting scheme based on out-of-fold residual consistency and show consistent accuracy gains over standard XGBoost and LightGBM baselines across eleven noisy tabular datasets.",
+      "year": 2019,
+      "venue": "CVPR",
+      "doi": "10.5555/pm2004.104",
+      "url": "https://papermatch.example.org/papers/4",
+      "category_id": 2
+    },
+    {
+      "id": 5,
+      "title": "Efficient Attention via Learned Sparsity Patterns",
+      "abstract": "Transformer self-attention scales quadratically with sequence length. We introduce a lightweight gating module that learns per-head sparsity masks during training, achieving near full-attention accuracy on long-document classification while reducing FLOPs by up to 60% at inference time.",
+      "year": 2023,
+      "venue": "ICLR",
+      "doi": "10.5555/pm2005.105",
+      "url": "https://papermatch.example.org/papers/5",
+      "category_id": 3
+    },
+    {
+      "id": 6,
+      "title": "Curriculum Pretraining for Low-Resource Vision Transformers",
+      "abstract": "Vision transformers typically need large labelled corpora to outperform convolutional networks. We present a curriculum pretraining strategy that orders unlabeled images by estimated visual complexity, improving downstream fine-tuning accuracy on small-scale datasets by several percentage points relative to random-order pretraining.",
+      "year": 2024,
+      "venue": "OSDI",
+      "doi": "10.5555/pm2006.106",
+      "url": "https://papermatch.example.org/papers/6",
+      "category_id": 3
+    },
+    {
+      "id": 7,
+      "title": "Weakly Supervised Segmentation for Medical Image Analysis",
+      "abstract": "Pixel-level medical image annotations are expensive to obtain. We propose a weakly supervised segmentation model trained only on image-level diagnostic labels, using class-activation refinement and anatomical priors, and evaluate it on chest X-ray and dermoscopy datasets against fully supervised baselines.",
+      "year": 2019,
+      "venue": "CVPR",
+      "doi": "10.5555/pm2007.107",
+      "url": "https://papermatch.example.org/papers/7",
+      "category_id": 4
+    },
+    {
+      "id": 8,
+      "title": "Cross-Domain Object Detection for Autonomous Driving in Adverse Weather",
+      "abstract": "Object detectors trained on clear-weather driving data degrade in fog, rain, and snow. We introduce a domain-adaptation pipeline that synthesizes adverse-weather training examples and aligns feature statistics across domains, improving detection mAP substantially on real adverse-weather driving benchmarks.",
+      "year": 2018,
+      "venue": "SIGMOD",
+      "doi": "10.5555/pm2008.108",
+      "url": "https://papermatch.example.org/papers/8",
+      "category_id": 4
+    },
+    {
+      "id": 9,
+      "title": "Retrieval-Augmented Summarization for Long Scientific Documents",
+      "abstract": "Abstractive summarizers struggle with documents exceeding standard transformer context windows. We combine a dense retriever over document sections with a constrained generation module, producing summaries of long scientific papers that are judged more faithful and complete than sliding-window baselines in human evaluation.",
+      "year": 2023,
+      "venue": "USENIX Security",
+      "doi": "10.5555/pm2009.109",
+      "url": "https://papermatch.example.org/papers/9",
+      "category_id": 5
+    },
+    {
+      "id": 10,
+      "title": "Privacy-Preserving Machine Learning for Clinical Text De-identification",
+      "abstract": "Clinical notes contain sensitive patient information that must be removed before research use. We present a de-identification model trained with differential-privacy guarantees that maintains high recall on protected health information categories while limiting memorization of individual patient records.",
+      "year": 2022,
+      "venue": "VLDB",
+      "doi": "10.5555/pm2010.110",
+      "url": "https://papermatch.example.org/papers/10",
+      "category_id": 5
+    },
+    {
+      "id": 11,
+      "title": "Detecting Adversarial Examples via Activation Consistency Checks",
+      "abstract": "Adversarial perturbations can fool image classifiers while remaining imperceptible to humans. We propose a detection method that flags inputs whose intermediate activations are inconsistent across lightly augmented copies, achieving high detection rates against several gradient-based and black-box attacks.",
+      "year": 2018,
+      "venue": "ICLR",
+      "doi": "10.5555/pm2011.111",
+      "url": "https://papermatch.example.org/papers/11",
+      "category_id": 6
+    },
+    {
+      "id": 12,
+      "title": "A Longitudinal Study of Phishing Campaign Infrastructure Reuse",
+      "abstract": "We analyze eighteen months of phishing takedown data to measure how often attackers reuse hosting infrastructure across campaigns. Our findings show substantial infrastructure clustering, which we use to build an early-warning system that flags newly registered domains likely to host phishing content.",
+      "year": 2024,
+      "venue": "ICML",
+      "doi": "10.5555/pm2012.112",
+      "url": "https://papermatch.example.org/papers/12",
+      "category_id": 6
+    },
+    {
+      "id": 13,
+      "title": "Adaptive Indexing for Mixed Read-Write Workloads",
+      "abstract": "Static index structures are often mistuned for workloads that shift between read-heavy and write-heavy phases. We propose an adaptive index that monitors query patterns and incrementally restructures itself, improving throughput on mixed OLTP workloads relative to fixed B-tree and LSM-tree baselines.",
+      "year": 2020,
+      "venue": "SIGMOD",
+      "doi": "10.5555/pm2013.113",
+      "url": "https://papermatch.example.org/papers/13",
+      "category_id": 7
+    },
+    {
+      "id": 14,
+      "title": "Approximate Query Processing with Learned Cardinality Estimators",
+      "abstract": "Cardinality estimation errors are a major source of poor query plans. We train a lightweight neural estimator on query-execution feedback and integrate it into a PostgreSQL-compatible planner, reducing estimation error and end-to-end query latency on standard OLAP benchmarks.",
+      "year": 2022,
+      "venue": "SOSP",
+      "doi": "10.5555/pm2014.114",
+      "url": "https://papermatch.example.org/papers/14",
+      "category_id": 7
+    },
+    {
+      "id": 15,
+      "title": "Fault-Tolerant Consensus for Geo-Distributed Edge Clusters",
+      "abstract": "Edge computing deployments span unreliable wide-area links. We adapt a leaderless consensus protocol to tolerate high-latency, lossy links between edge clusters, demonstrating lower tail latency than Raft-based baselines under simulated network partitions.",
+      "year": 2020,
+      "venue": "WWW",
+      "doi": "10.5555/pm2015.115",
+      "url": "https://papermatch.example.org/papers/15",
+      "category_id": 8
+    },
+    {
+      "id": 16,
+      "title": "Elastic Resource Scheduling for Stream Processing Pipelines",
+      "abstract": "Streaming workloads exhibit bursty, unpredictable load. We present a scheduler that predicts short-term load spikes from recent throughput history and proactively rebalances operators across a cluster, reducing backpressure events compared to reactive autoscaling baselines.",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "doi": "10.5555/pm2016.116",
+      "url": "https://papermatch.example.org/papers/16",
+      "category_id": 8
+    },
+    {
+      "id": 17,
+      "title": "Cost-Aware Serverless Function Placement Across Multi-Cloud Regions",
+      "abstract": "Serverless platforms rarely optimize jointly for cost and latency across cloud providers. We formulate function placement as a constrained optimization problem and propose a heuristic scheduler that reduces monthly compute cost while keeping p99 latency within service-level targets across three public cloud providers.",
+      "year": 2019,
+      "venue": "WWW",
+      "doi": "10.5555/pm2017.117",
+      "url": "https://papermatch.example.org/papers/17",
+      "category_id": 9
+    },
+    {
+      "id": 18,
+      "title": "Energy-Efficient Virtual Machine Consolidation in Data Centers",
+      "abstract": "Data center energy consumption is dominated by underutilized virtual machines. We propose a consolidation algorithm that migrates VMs based on predicted future load rather than instantaneous utilization, reducing active server count and associated energy use in trace-driven simulations.",
+      "year": 2023,
+      "venue": "USENIX Security",
+      "doi": "10.5555/pm2018.118",
+      "url": "https://papermatch.example.org/papers/18",
+      "category_id": 9
+    },
+    {
+      "id": 19,
+      "title": "Interpretable Time-Series Anomaly Detection for Industrial IoT",
+      "abstract": "Anomaly detectors for industrial sensor data are often opaque black boxes. We propose a detection model built on interpretable change-point features that gives maintenance engineers human-readable explanations for flagged anomalies, evaluated on multi-sensor manufacturing datasets.",
+      "year": 2023,
+      "venue": "AAAI",
+      "doi": "10.5555/pm2019.119",
+      "url": "https://papermatch.example.org/papers/19",
+      "category_id": 10
+    },
+    {
+      "id": 20,
+      "title": "Fairness-Aware Feature Selection for Credit Risk Models",
+      "abstract": "Feature selection choices can inadvertently encode demographic bias into credit-scoring models. We propose a feature-selection procedure that jointly optimizes predictive accuracy and a fairness-gap penalty, producing credit models with reduced disparate impact at a modest accuracy cost.",
+      "year": 2020,
+      "venue": "CVPR",
+      "doi": "10.5555/pm2020.120",
+      "url": "https://papermatch.example.org/papers/20",
+      "category_id": 10
+    },
+    {
+      "id": 21,
+      "title": "Benchmarking Transfer Learning Across Low-Resource Languages",
+      "abstract": "Transfer learning has closed much of the performance gap for high-resource languages but low-resource languages remain underserved. We benchmark eight transfer strategies across eighteen low-resource languages and find that intermediate-language pivoting consistently outperforms direct fine-tuning on translation and classification tasks.",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "doi": "10.5555/pm2021.121",
+      "url": "https://papermatch.example.org/papers/21",
+      "category_id": 5
+    },
+    {
+      "id": 22,
+      "title": "Graph Neural Networks for Drug-Target Interaction Prediction",
+      "abstract": "Predicting whether a candidate molecule binds a target protein is central to drug discovery. We propose a graph neural network that jointly encodes molecular graphs and protein contact maps, improving interaction-prediction accuracy over fingerprint-based baselines on public bioactivity datasets.",
+      "year": 2024,
+      "venue": "ICLR",
+      "doi": "10.5555/pm2022.122",
+      "url": "https://papermatch.example.org/papers/22",
+      "category_id": 2
+    },
+    {
+      "id": 23,
+      "title": "Federated Learning Under Non-IID Client Data Distributions",
+      "abstract": "Federated learning performance degrades when client data distributions differ substantially. We propose a client-clustering strategy that groups similar clients before aggregation, improving convergence speed and final accuracy on heterogeneous federated benchmarks relative to standard FedAvg.",
+      "year": 2022,
+      "venue": "USENIX Security",
+      "doi": "10.5555/pm2023.123",
+      "url": "https://papermatch.example.org/papers/23",
+      "category_id": 2
+    },
+    {
+      "id": 24,
+      "title": "Self-Supervised Representation Learning for Satellite Imagery",
+      "abstract": "Labelled satellite imagery is scarce relative to the volume of raw sensor data collected. We propose a self-supervised pretraining objective tailored to multi-spectral satellite bands, improving downstream land-cover classification accuracy with a fraction of the labelled data required by supervised baselines.",
+      "year": 2023,
+      "venue": "WWW",
+      "doi": "10.5555/pm2024.124",
+      "url": "https://papermatch.example.org/papers/24",
+      "category_id": 4
+    },
+    {
+      "id": 25,
+      "title": "A Query Optimizer Extension for Vector Similarity Joins",
+      "abstract": "Modern applications increasingly combine relational filters with nearest-neighbour vector search. We extend a cost-based query optimizer to reason jointly about selectivity of relational predicates and approximate vector search, producing query plans that outperform naive filter-then-search pipelines.",
+      "year": 2021,
+      "venue": "ACL",
+      "doi": "10.5555/pm2025.125",
+      "url": "https://papermatch.example.org/papers/25",
+      "category_id": 7
+    },
+    {
+      "id": 26,
+      "title": "Byzantine-Resilient Federated Aggregation for Healthcare Networks",
+      "abstract": "Federated learning across hospitals is vulnerable to malicious or faulty participants. We propose a robust aggregation rule that down-weights updates inconsistent with a trusted validation set, maintaining model accuracy under a substantial fraction of Byzantine clients in simulated hospital networks.",
+      "year": 2022,
+      "venue": "WWW",
+      "doi": "10.5555/pm2026.126",
+      "url": "https://papermatch.example.org/papers/26",
+      "category_id": 6
+    },
+    {
+      "id": 27,
+      "title": "Serverless Cold-Start Mitigation via Predictive Pre-Warming",
+      "abstract": "Cold starts remain a major source of latency in serverless platforms. We propose a pre-warming policy that predicts near-future invocation bursts from historical traffic patterns, reducing cold-start rate substantially with modest additional idle-instance cost in trace-driven evaluation.",
+      "year": 2022,
+      "venue": "CVPR",
+      "doi": "10.5555/pm2027.127",
+      "url": "https://papermatch.example.org/papers/27",
+      "category_id": 9
+    },
+    {
+      "id": 28,
+      "title": "Counterfactual Explanations for Tabular Deep Learning Models",
+      "abstract": "Deep tabular models are increasingly used in lending and hiring decisions where explainability matters. We propose a counterfactual-generation method constrained to produce actionable, realistic feature changes, and evaluate explanation plausibility against gradient-based and rule-based baselines with human raters.",
+      "year": 2024,
+      "venue": "WWW",
+      "doi": "10.5555/pm2028.128",
+      "url": "https://papermatch.example.org/papers/28",
+      "category_id": 10
+    },
+    {
+      "id": 29,
+      "title": "Scalable Approximate Nearest Neighbour Search on Billion-Scale Embeddings",
+      "abstract": "Recommendation and retrieval systems increasingly operate over billion-scale embedding collections. We combine product quantization with a learned routing layer to reduce memory footprint and query latency relative to standard IVF-PQ indexes on public billion-scale ANN benchmarks.",
+      "year": 2021,
+      "venue": "NeurIPS",
+      "doi": "10.5555/pm2029.129",
+      "url": "https://papermatch.example.org/papers/29",
+      "category_id": 1
+    },
+    {
+      "id": 30,
+      "title": "Vision-Language Pretraining for Zero-Shot Document Classification",
+      "abstract": "Document images combine visual layout and textual content that single-modality models fail to exploit jointly. We pretrain a vision-language model on paired document image and OCR-text corpora, achieving strong zero-shot classification accuracy on unseen document categories.",
+      "year": 2019,
+      "venue": "NeurIPS",
+      "doi": "10.5555/pm2030.130",
+      "url": "https://papermatch.example.org/papers/30",
+      "category_id": 3
+    }
+  ],
+  "paper_authors": [
+    [
+      1,
+      9,
+      1
+    ],
+    [
+      1,
+      8,
+      2
+    ],
+    [
+      2,
+      18,
+      1
+    ],
+    [
+      2,
+      3,
+      2
+    ],
+    [
+      3,
+      1,
+      1
+    ],
+    [
+      3,
+      3,
+      2
+    ],
+    [
+      4,
+      18,
+      1
+    ],
+    [
+      4,
+      7,
+      2
+    ],
+    [
+      5,
+      8,
+      1
+    ],
+    [
+      5,
+      15,
+      2
+    ],
+    [
+      5,
+      9,
+      3
+    ],
+    [
+      5,
+      1,
+      4
+    ],
+    [
+      6,
+      14,
+      1
+    ],
+    [
+      6,
+      11,
+      2
+    ],
+    [
+      6,
+      9,
+      3
+    ],
+    [
+      7,
+      4,
+      1
+    ],
+    [
+      7,
+      3,
+      2
+    ],
+    [
+      7,
+      13,
+      3
+    ],
+    [
+      8,
+      20,
+      1
+    ],
+    [
+      8,
+      9,
+      2
+    ],
+    [
+      8,
+      2,
+      3
+    ],
+    [
+      9,
+      13,
+      1
+    ],
+    [
+      9,
+      3,
+      2
+    ],
+    [
+      10,
+      19,
+      1
+    ],
+    [
+      10,
+      7,
+      2
+    ],
+    [
+      10,
+      3,
+      3
+    ],
+    [
+      11,
+      10,
+      1
+    ],
+    [
+      11,
+      3,
+      2
+    ],
+    [
+      11,
+      8,
+      3
+    ],
+    [
+      12,
+      9,
+      1
+    ],
+    [
+      12,
+      15,
+      2
+    ],
+    [
+      12,
+      12,
+      3
+    ],
+    [
+      12,
+      6,
+      4
+    ],
+    [
+      13,
+      9,
+      1
+    ],
+    [
+      13,
+      3,
+      2
+    ],
+    [
+      13,
+      6,
+      3
+    ],
+    [
+      14,
+      6,
+      1
+    ],
+    [
+      14,
+      15,
+      2
+    ],
+    [
+      14,
+      13,
+      3
+    ],
+    [
+      15,
+      11,
+      1
+    ],
+    [
+      15,
+      2,
+      2
+    ],
+    [
+      15,
+      8,
+      3
+    ],
+    [
+      16,
+      13,
+      1
+    ],
+    [
+      16,
+      9,
+      2
+    ],
+    [
+      16,
+      3,
+      3
+    ],
+    [
+      17,
+      7,
+      1
+    ],
+    [
+      17,
+      16,
+      2
+    ],
+    [
+      17,
+      13,
+      3
+    ],
+    [
+      18,
+      9,
+      1
+    ],
+    [
+      18,
+      5,
+      2
+    ],
+    [
+      18,
+      8,
+      3
+    ],
+    [
+      19,
+      19,
+      1
+    ],
+    [
+      19,
+      14,
+      2
+    ],
+    [
+      19,
+      13,
+      3
+    ],
+    [
+      20,
+      17,
+      1
+    ],
+    [
+      20,
+      16,
+      2
+    ],
+    [
+      20,
+      3,
+      3
+    ],
+    [
+      21,
+      5,
+      1
+    ],
+    [
+      21,
+      6,
+      2
+    ],
+    [
+      22,
+      20,
+      1
+    ],
+    [
+      22,
+      3,
+      2
+    ],
+    [
+      22,
+      13,
+      3
+    ],
+    [
+      22,
+      18,
+      4
+    ],
+    [
+      23,
+      18,
+      1
+    ],
+    [
+      23,
+      1,
+      2
+    ],
+    [
+      23,
+      4,
+      3
+    ],
+    [
+      24,
+      11,
+      1
+    ],
+    [
+      24,
+      4,
+      2
+    ],
+    [
+      24,
+      10,
+      3
+    ],
+    [
+      25,
+      1,
+      1
+    ],
+    [
+      25,
+      9,
+      2
+    ],
+    [
+      25,
+      17,
+      3
+    ],
+    [
+      25,
+      6,
+      4
+    ],
+    [
+      26,
+      10,
+      1
+    ],
+    [
+      26,
+      17,
+      2
+    ],
+    [
+      27,
+      12,
+      1
+    ],
+    [
+      27,
+      6,
+      2
+    ],
+    [
+      27,
+      18,
+      3
+    ],
+    [
+      28,
+      20,
+      1
+    ],
+    [
+      28,
+      11,
+      2
+    ],
+    [
+      29,
+      12,
+      1
+    ],
+    [
+      29,
+      10,
+      2
+    ],
+    [
+      30,
+      19,
+      1
+    ],
+    [
+      30,
+      3,
+      2
+    ],
+    [
+      30,
+      20,
+      3
+    ]
+  ],
+  "users": [
+    [
+      "Grace Anderson",
+      "grace.anderson@rvcegrad.edu",
+      "RESEARCHER"
+    ],
+    [
+      "Marcus Bell",
+      "marcus.bell@rvcegrad.edu",
+      "RESEARCHER"
+    ],
+    [
+      "Nadia Farouk",
+      "nadia.farouk@rvcegrad.edu",
+      "RESEARCHER"
+    ],
+    [
+      "Tom\u00e1s Ibarra",
+      "tomas.ibarra@rvcegrad.edu",
+      "RESEARCHER"
+    ],
+    [
+      "Priyanka Desai",
+      "priyanka.desai@rvcegrad.edu",
+      "RESEARCHER"
+    ],
+    [
+      "Admin User",
+      "admin@papermatch.edu",
+      "ADMIN"
+    ]
+  ]
+}
