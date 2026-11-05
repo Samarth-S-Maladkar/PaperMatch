@@ -60,7 +60,7 @@ User → Next.js UI → Next.js API routes → PostgreSQL + pgvector
 - **Seed data**: `database/seed.sql` (structural) + `scripts/seed.ts` (loads it with real bcrypt hashes and sample interactions)
 - **Demo SQL queries**: `database/demo_queries.sql`
 
-10 tables, 3NF, full PK/FK/UNIQUE/CHECK/NOT NULL constraints, 11 indexes
+11 tables, 3NF, full PK/FK/UNIQUE/CHECK/NOT NULL constraints, 14 indexes
 (including a GIN full-text index and an HNSW vector index), 2 views, 3
 stored functions, 4 triggers.
 
@@ -116,6 +116,12 @@ npm run dev                    # starts the Next.js app on http://localhost:3000
 ```
 
 Then open http://localhost:3000.
+
+> **Notes**
+> - Docker Compose already loads `database/schema.sql` on first start, so `npm run db:init` is optional (it needs `psql` installed locally).
+> - The `tsx` scripts (`db:seed`, `db:embed`) do not read `.env` themselves. Export it first:
+>   `set -a; source .env; set +a` (Git Bash / WSL / Linux / macOS).
+> - The embedding service downloads the MiniLM model (~80 MB) on first use, so the first `db:embed` can be slow.
 
 ### Environment Variables
 
@@ -188,21 +194,44 @@ HNSW) · Full-Text Search · Vector Similarity Search — see
 `docs/advanced-database-features.md` for where each is used in real
 application code paths.
 
+## Team
+
+| Member | SRN |
+|---|---|
+| Samarth S. Maladkar | PES1UG24AM396 |
+| Krishna G Pai | PES1UG24AM372 |
+
+Course: UE23CS351A, Database Management Systems (PES University, Aug-Dec 2026).
+The full project report is in `docs/PaperMatch_DBMS_Project_Report.docx`.
+
 ## Team Contributions
 
-Both members contributed to both database and application development.
+Work was split so each member owns about half of the code and database work.
+Both members reviewed each other's parts.
 
-**Member 1**: __________________
-- Database design (ER modeling, relational schema, constraints)
-- PostgreSQL implementation (schema, indexes, views, functions, triggers)
-- SQL query development (`database/demo_queries.sql`)
-- Recommendation engine algorithm design
+**Samarth S. Maladkar: search, vectors and recommendations**
+- Vector layer: `paper_embeddings`, HNSW index, `match_similar_papers()`
+- `lib/search.ts` (keyword, semantic, hybrid), `lib/recommendations.ts`, `lib/embeddings.ts`
+- `app/api/search/*`, `app/api/recommendations`, `app/api/papers/*` (CRUD and similar papers)
+- Admin analytics and embedding regeneration: `app/api/admin/analytics`, `app/api/admin/papers/[id]/regenerate-embedding`
+- `embedding-service/` (FastAPI + all-MiniLM-L6-v2), `scripts/generate-embeddings.ts`
+- Pages: `app/search`, `app/dashboard`, `app/papers/[id]`, `app/admin/page.tsx`, `app/admin/papers`, `components/PaperCard.tsx`
+- Project scaffold and configuration (`package.json`, Next.js, Tailwind, TypeScript config)
 
-**Member 2**: __________________
-- Next.js frontend (all pages under `app/`)
-- API route implementation and integration
-- Authentication and authorization
-- UI/UX and Tailwind styling
+**Krishna G Pai: database, authentication and admin**
+- Core schema: tables, constraints, indexes, triggers, views, functions (`database/schema.sql`)
+- Seed data and queries: `database/seed.sql`, `database/seed_data.json`, `database/demo_queries.sql`, `scripts/seed.ts`
+- `lib/db.ts` (pool and transactions), `lib/auth.ts` (bcrypt, JWT, role checks), `lib/validation.ts`
+- `app/api/auth/*`, `interactions`, `saved`, `liked`, `interests`, `admin/authors`, `admin/categories`
+- Pages: `app/login`, `app/register`, `app/interests`, `app/saved`, `app/profile`, `app/admin/authors`, `app/admin/categories`, `components/NavBar.tsx`
+- `docker-compose.yml`, README and the project report
+
+## Known Limitations
+
+- Role-based access is enforced in the application layer only (no database GRANT/REVOKE or row-level security).
+- No recursive SQL query is used.
+- No automated test suite; testing is manual and SQL-level (`docs/testing.md`, `docs/test-results.md`).
+- Admin authors and categories support list and create only.
 
 ## Future Enhancements
 
